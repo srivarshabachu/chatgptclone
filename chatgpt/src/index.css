@@ -77,6 +77,14 @@ nav {
   max-width: 650px;
 }
 
+input {
+  width: 100%;
+  background-color: #343541;
+  border: solid 0.5px rgba(255, 255, 255, 0.5);
+  padding: 12px 15px;
+  border-radius: 7px;
+}
+
 .info {
   color: rgba(255, 255, 255, 0.5);
   font-size: 10px;
