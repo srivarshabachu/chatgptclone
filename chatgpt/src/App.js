@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react'
 const App = () => {
+  const [value, setValue] = useState(null)
+
+  const [message, setMessage] = useState(null)
   const getMessages = async () => {
     const options = {
       method: "POST",
       body: JSON.stringify({
-        message: "Hello How are you?",
+        message: "Hello How are you?"
       }),
       headers: {
         "Content-Type": "application/json"
       }
     }
     try {
-      const response = await fetch('https://localhost:8000/completions', options)
-      const data = await response.json()
+      const response = await fetch('http://localhost:8000/completions', options)
+      const data = response.json()
       console.log(data)
     } catch (error) {
       console.error(error)
