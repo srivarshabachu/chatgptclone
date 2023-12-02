@@ -8,16 +8,20 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .app {
   background-color: #343541;
+  display: flex;
 }
 
 .side-bar {
-  background-color: #202123;
+  background-color: black;
   height: 100vh;
-  width: 244px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,9 +29,56 @@ body {
 
 button {
   border: solid 0.5px rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 10px;
+  cursor: pointer;
+}
+
+nav {
+  border-top: solid 0.3px rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  padding: 5px;
+}
+
+.history {
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+}
+
+.history li {
+  list-style-type: none;
+  padding: 10px 0;
+  cursor: pointer;
 }
 
 .main {
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.bottum-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+}
+
+.info {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  padding: 10px;
 }
