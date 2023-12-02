@@ -1,8 +1,4 @@
-import { useState, useEffect } from 'react'
 const App = () => {
-  const [value, setValue] = useState(null)
-
-  const [message, setMessage] = useState(null)
   const getMessages = async () => {
     const options = {
       method: "POST",
@@ -15,7 +11,7 @@ const App = () => {
     }
     try {
       const response = await fetch('http://localhost:8000/completions', options)
-      const data = response.json()
+      const data = await response.json()
       console.log(data)
     } catch (error) {
       console.error(error)
