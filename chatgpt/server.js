@@ -4,7 +4,7 @@ const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(cors())
-const API_KEY = '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'
+const API_KEY = ''
 app.post('/completions', async (req, res) => {
     const options = {
         method: "POST",
@@ -14,7 +14,7 @@ app.post('/completions', async (req, res) => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo-1106",
-            messages: [{ role: "user", content: "How are you?" }],
+            messages: [{ role: "user", content: req.body.message }],
             max_tokens: 100,
         })
     }
